@@ -30,6 +30,7 @@ function showMovies(movies) {
             <div class="movie-info">
                 <h3>${title}</h3>
                 <span class="${getByRate(vote_average)}">${vote_average}</span>
+                <span class="${getByVC(vote_count)}">${vote_count}</span>
             </div>
             <div class="overview">
                 <h3>OverView</h3>
@@ -42,15 +43,15 @@ function showMovies(movies) {
 }
 
 
-// function getByVC (count){
-//     if (count >= 2000){
-//         return 'green'
-//     } else if (count >= 1000){
-//         return 'orange'
-//     } else{
-//         return 'red'
-//     }
-// }
+function getByVC (count){
+    if (count >= 2000){
+        return 'green'
+    } else if (count >= 1000){
+        return 'orange'
+    } else{
+        return 'red'
+    }
+}
 function getByRate(vote){
     if (vote >= 7.5){
         return 'green'
